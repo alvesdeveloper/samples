@@ -1,3 +1,5 @@
-let teste = "olá mundo!"
+var ola = (nome: string) => {
+    console.log("Olá " + nome)
+}
 
-console.log(teste)
+ola("Jorge");
