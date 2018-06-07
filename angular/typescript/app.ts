@@ -1,5 +1,5 @@
-var ola = (nome: string) => {
-    console.log("Olá " + nome)
+var ola = (nome: string, sobrenome: string) => {
+    console.log("Olá " + nome + sobrenome)
 }
 
-ola("Jorge");
+ola("Anderson ", "Silva");
