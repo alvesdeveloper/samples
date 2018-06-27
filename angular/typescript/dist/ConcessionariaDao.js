@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+var Concessionaria_1 = require("./Concessionaria");
 var ConcessionariaDao = /** @class */ (function () {
     function ConcessionariaDao() {
         this.nomeTabela = 'tb_concessionaria';
@@ -14,15 +15,16 @@ var ConcessionariaDao = /** @class */ (function () {
     };
     ConcessionariaDao.prototype.remover = function (id) {
         console.log('regra delete');
-        return null;
+        return new Concessionaria_1.default('', []);
     };
     ConcessionariaDao.prototype.selecionar = function (id) {
         console.log('regra select');
-        return null;
+        return new Concessionaria_1.default('', []);
     };
     ConcessionariaDao.prototype.selecionarTodos = function () {
         console.log('regra getAll');
-        return [new Array];
+        return [new Concessionaria_1.default('', [])];
     };
     return ConcessionariaDao;
 }());
+exports.ConcessionariaDao = ConcessionariaDao;
