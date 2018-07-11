@@ -1,5 +1,40 @@
-
-<p>Testando meu primeiro componente</p>
-
 <!--Instanciando o componente topo -->
 <app-topo></app-topo>
+
+<!-- 
+    Abaixo na instancia do componente "painel", À ESQUERDA (encerrarJogo), estamos usando um property binding...
+    para executar o metodo "encerrar jogo" do componente app (Compoenente PAI)..
+    À DIREITA dizemos quando queremos executar este evento, com base no @Output feito do compoenente filho(Painel).
+    Ou seja, À direita, quando o evento é disparado no componente filho(painel), ele avisa ao componente pai(app), À esquerda.
+-->
+<div *ngIf="jogoEmAndamento; else fimDeJogo ">
+    <app-painel (encerrarJogo)="encerrarJogo($event)"></app-painel>
+</div>
+
+<!-- 
+    ng-template é uma diretiva que funciona como um template, porem sem o componente.
+    #fimDeJogo é um apontamento feito no else da diretiva ngIf da div da instancia do componente painel..
+    Ao encerrar o jogo o else executará a diretiva abaixo..    
+-->
+<ng-template #fimDeJogo>
+    <div *ngIf="tipoEncerramento === 'derrota'; else fimDeJogoVitoria" class="container" style="margin-top: 50px">
+        <div class="row">
+            <div class="col">
+                <h3 style="color: red">Fim de jogo, infelizmente você perdeu!</h3>
+                <button class="btn btn-primary" (click)="reiniciarJogo()">Jogar novamente</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<!-- O mesmo de cima, porém quando for vitória!-->
+<ng-template #fimDeJogoVitoria>
+        <div class="container" style="margin-top: 50px">
+                <div class="row">
+                    <div class="col">
+                        <h3 style="color: green">Fim de jogo, você ganhou!</h3>
+                        <button class="btn btn-primary" (click)="reiniciarJogo()">Jogar novamente</button>
+                    </div>
+                </div>
+            </div>   
+</ng-template>

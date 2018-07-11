@@ -1,0 +1,57 @@
+
+
+
+<div class="containser">
+    <div class="jumbotron">
+        
+        <div class="row">
+            <div class="col-sm-6">
+                    <!-- 
+                        Dentro da instancia do componente "progresso" que está no template do componente "Painel", ..
+                        vamos fazer uma co-relação do atributo progresso (do componente progresso), ..
+                        com o atributo percentualConcluido (do componente painel), dessa forma conseguimos passar ..
+                        o percentual concluido calculado no painel para o componente progresso, utilizando PROPERTY BINDING "[]" .
+                        
+                        obs.: Só conseguimos usar o atributo "progresso"(do compenente progresso)...
+                              no template do componente "painel", porque dentro do componente progresso...
+                              usamos a função decoradora @Input(permite receber parametros de entrada).
+                    -->
+                    <app-progresso [progresso]="percentualConcluido"></app-progresso>
+            </div>    
+            <div class="col-sm-6">
+                <div class="d-flex justify-content-end">
+                    <app-tentativas [tentativas]="tentativas"></app-tentativas>  
+                </div>
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h6>{{ instrucao }}</h6>
+                <p>{{ rodadaFrase.fraseEng }}</p>
+
+                <div class="form-group">
+                    <!-- 
+                        (input)="atualizaResposta($event)"  ==> aqui estamos utilizando "Event Binding pra atualizar a variavel "resposta"
+                        [value]="resposta" ==> aqui estamos utilizando "Property Binding pra pegar a "reposta" e inserir dentro do elemento textarea ..
+                            ... dessa forma quando limparmos a variavel "resposta", atraves do "verificar resposta()", o valor do elemento também será limpo..
+                    -->
+                    <textarea 
+                        class="form-control" 
+                        rows="3"
+                        (input)="atualizaResposta($event)" 
+                        [value]="resposta"
+                    ></textarea>
+                </div>                
+            </div>   
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary" (click)="verificarResposta()">Verificar</button>
+                </div>                    
+            </div>    
+        </div>
+    </div>
+</div>

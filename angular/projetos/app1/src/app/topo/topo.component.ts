@@ -4,8 +4,10 @@ import { Component } from '@angular/core';
 /* conseguimos usar este decorator porque fizemos o import do modulo "component", acima*/
 @Component({
     selector: 'app-topo', /*indica qual será o rotulo usado para instancia desse componente*/
-    templateUrl: './topo.component.html' /*indica qual o template que a classe abaixo controlará*/
-
+    templateUrl: './topo.component.html', /*indica qual o template que a classe abaixo controlará*/
+    styleUrls: ['./topo.component.css']
 })
 
-export class TopoComponent {}
+export class TopoComponent {
+    public  titulo: string = 'Aprendendo Inglês';
+}

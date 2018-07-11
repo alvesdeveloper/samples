@@ -1,0 +1,9 @@
+<!--
+<img [src]="coracaoVazio">
+<img [src]="coracaoCheio">
+<img [src]="coracaoCheio">
+-->
+
+<!-- Estamos usando a diretiva ngfor para pecorrer o array coracoes e atraves do property binding passamos..
+     o metodo que verifica o status de cada um -->
+<img *ngFor="let i of coracoes" [src]="i.exibeCoracao()"/>
