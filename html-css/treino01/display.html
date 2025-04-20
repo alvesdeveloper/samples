@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Caixa padrão com tamanho fixo */
+      .caixa {
+        height: 200px;
+        width: 200px;
+        font-size: 35px;
+        padding: 20px;
+        border: 2px solid white;
+        background-color: crimson;
+        margin-bottom: 20px;
+      }
+
+      /* Exemplo de display: block */
+      .display-block {
+        display: block;
+      }
+
+      /* Exemplo de display: inline */
+      .display-inline {
+        display: inline;
+      }
+
+      /* Exemplo de display: inline-block */
+      .display-inline-block {
+        display: inline-block;
+      }
+
+      /* Exemplo de display: flex */
+      .display-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      /* Exemplo de display: grid */
+      .display-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      /* Exemplo de display: none */
+      .display-none {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Exemplo de display: block</h2>
+    <div class="caixa display-block">Caixa A</div>
+    <div class="caixa display-block">Caixa B</div>
+    <div class="caixa display-block">Caixa C</div>
+
+    <h2>Exemplo de display: inline</h2>
+    <div class="caixa display-inline">Caixa A</div>
+    <div class="caixa display-inline">Caixa B</div>
+    <div class="caixa display-inline">Caixa C</div>
+
+    <h2>Exemplo de display: inline-block</h2>
+    <div class="caixa display-inline-block">Caixa A</div>
+    <div class="caixa display-inline-block">Caixa B</div>
+    <div class="caixa display-inline-block">Caixa C</div>
+
+    <h2>Exemplo de display: grid</h2>
+    <div class="display-grid">
+      <div class="caixa">Caixa A</div>
+      <div class="caixa">Caixa B</div>
+      <div class="caixa">Caixa C</div>
+    </div>
+
+    <h2>Exemplo de display: flex</h2>
+    <div class="display-flex">
+      <div class="caixa">Caixa A</div>
+      <div class="caixa">Caixa B</div>
+      <div class="caixa">Caixa C</div>
+    </div>
+
+    <h2>Exemplo de display: none</h2>
+    <div class="caixa display-none">Caixa A</div>
+    <div class="caixa display-none">Caixa B</div>
+    <div class="caixa display-none">Caixa C</div>
+  </body>
+</html>

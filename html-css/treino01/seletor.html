@@ -1,0 +1,36 @@
+<!--
+  Principais seletores:
+  - tag
+  - id
+  - classe
+  - atributo
+
+  - No caso de conflito de propriedades, será respeitado o que for mais específico.
+-->
+
+<html>
+  <head>
+    <style>
+      div {
+        background-color: brown;
+        margin: 10px;
+        padding: 10px;
+        color: azure;
+      }
+
+      #caixa-b {
+        background-color: black;
+        font-size: 40px;
+      }
+
+      .classe1 {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="classe1">Caixa A</div>
+    <div id="caixa-b" class="classe1">Caixa B</div>
+    <div>Caixa C</div>
+  </body>
+</html>

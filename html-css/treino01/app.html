@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Exemplo de aplicação</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        color: white;
+        font-size: 24px;
+        background-color: black;
+        min-height: 100vh; /* a diferença entre vh e px é que o vh é relativo ao tamanho da tela, enquanto o px é absoluto. */
+      }
+      a {
+        color: blue;
+      }
+      header {
+        display: flex;
+        justify-content: center;
+        background-color: crimson;
+        padding: 20px;
+      }
+
+      aside {
+        width: 350px;
+        background-color: bisque;
+        padding: 20px;
+      }
+      main {
+        background-color: aqua;
+        padding: 20px;
+        flex: 1; /*Ocupa todo o espaço restante disponível */
+      }
+      footer {
+        display: flex;
+        justify-content: end;
+        background-color: blueviolet;
+        padding: 20px;
+      }
+      .central {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        width: 1280px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Cabeçalho</header>
+    <div class="central">
+      <main>Conteúdo Principal</main>
+      <aside>
+        Área Lateral
+
+        <nav>
+          <a href="https://amazon.com.br" target="¨_blank¨">Amazon</a>
+        </nav>
+      </aside>
+    </div>
+    <footer>Rodapé</footer>
+  </body>
+</html>

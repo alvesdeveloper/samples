@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Display Flex</title>
+
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+
+      .externa {
+        height: 1000px;
+        border: 2px solid yellow;
+        display: flex;
+        flex-direction: column; /* define o eixo principal */
+        justify-content: space-evenly; /* posiciona o eixo principal */
+        align-items: center; /* pocisiona o eixo cruzado */
+      }
+
+      .caixa {
+        background-color: crimson;
+        border: 2px solid white;
+        padding: 20px;
+        font-size: 30px;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="externa">
+      <div class="caixa">#1</div>
+      <div class="caixa">#2</div>
+      <div class="caixa">#3</div>
+      <div class="caixa">#4</div>
+      <div class="caixa">#5</div>
+    </div>
+  </body>
+</html>
